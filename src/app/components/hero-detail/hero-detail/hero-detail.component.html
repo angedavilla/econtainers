@@ -1,0 +1,39 @@
+<div>
+  <app-header></app-header>
+</div>
+
+<div *ngIf="hero" class="container text-center">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="my-3 text-primary font-tt-supermolot">{{ hero.name }}</h1>
+      <img [src]="hero.images.md" alt="{{ hero.name }}" class="img-fluid mb-3">
+      <p><strong>Full Name:</strong> {{ hero.biography.fullName }}</p>
+      <p><strong>Alter Egos:</strong> {{ hero.biography.alterEgos }}</p>
+      <p><strong>Aliases:</strong> {{ hero.biography.aliases.join(', ') }}</p>
+      <p><strong>Place of Birth:</strong> {{ hero.biography.placeOfBirth }}</p>
+      <p><strong>First Appearance:</strong> {{ hero.biography.firstAppearance }}</p>
+      <p><strong>Publisher:</strong> {{ hero.biography.publisher }}</p>
+      <p><strong>Alignment:</strong> {{ hero.biography.alignment }}</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="my-3 text-primary font-tt-supermolot">Appearance</h2>
+      <p><strong>Gender:</strong> {{ hero.appearance.gender }}</p>
+      <p><strong>Race:</strong> {{ hero.appearance.race }}</p>
+      <p><strong>Height:</strong> {{ hero.appearance.height[0] }} - {{ hero.appearance.height[1] }}</p>
+      <p><strong>Weight:</strong> {{ hero.appearance.weight[0] }} - {{ hero.appearance.weight[1] }}</p>
+      <p><strong>Eye Color:</strong> {{ hero.appearance.eyeColor }}</p>
+      <p><strong>Hair Color:</strong> {{ hero.appearance.hairColor }}</p>
+      <h3 class="text-primary font-tt-supermolot">Work</h3>
+      <p><strong>Occupation:</strong> {{ hero.work.occupation }}</p>
+      <p><strong>Base:</strong> {{ hero.work.base }}</p>
+      <h3 class="text-primary font-tt-supermolot">Connections</h3>
+      <p><strong>Group Affiliation:</strong> {{ hero.connections.groupAffiliation }}</p>
+      <p><strong>Relatives:</strong> {{ hero.connections.relatives }}</p>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <app-footer></app-footer>
+</div>

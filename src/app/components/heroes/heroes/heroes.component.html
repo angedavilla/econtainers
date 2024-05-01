@@ -1,0 +1,30 @@
+<div>
+  <app-header></app-header>
+</div>
+
+<div>
+  <app-search></app-search>
+</div>
+
+<div class="container text-center">
+  <div class="row">
+    <div *ngFor="let hero of (searchResults.length > 0 ? searchResults : heroes)"
+      class="col-lg-3 col-md-4 col-sm-12 mb-5">
+      <div class="card text-center custom-border" style="width:16rem;margin: auto;" (click)="redirectToHeroDetail(hero.id)">
+          <img [src]="getImageUrl(hero)" class="img-fluid custom-img-border" style="max-height: 13rem;" alt="{{ hero.name }}">
+        <div class="card-body">
+          <h5 class="card-title text-primary font-tt-supermolot">{{ hero.name }}</h5>
+          <p class="text-start mb-1 custom-color-text-card">Intelligence: <strong class="font-arial-bold">{{ hero.powerstats.intelligence }}</strong></p>
+          <p class="text-start mb-1 custom-color-text-card">Speed: <strong class="font-arial-bold">{{ hero.powerstats.speed }}</strong></p>
+          <p class="text-start mb-1 custom-color-text-card">Power: <strong class="font-arial-bold">{{ hero.powerstats.power }}</strong></p>
+          <p class="text-start mb-1 custom-color-text-card">Gender: <strong class="font-arial-bold">{{ hero.appearance.gender}}</strong></p>
+          <p class="text-start mb-1 custom-color-text-card">Race: <strong class="font-arial-bold">{{ hero.appearance.race }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <app-footer></app-footer>
+</div>
