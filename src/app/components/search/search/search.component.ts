@@ -9,7 +9,7 @@ import { HeroSearchService } from 'src/app/services/hero-search/hero-search.serv
 })
 export class SearchComponent implements OnInit {
 
-  searchName: string = ''
+  searchName: string = '';
 
   constructor(private heroSearchService: HeroSearchService) { }
 
