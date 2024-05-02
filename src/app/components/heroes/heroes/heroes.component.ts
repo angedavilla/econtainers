@@ -41,8 +41,7 @@ export class HeroesComponent implements OnInit {
     if (screenSize === 'lg' || screenSize === 'md' || screenSize === 'sm' || screenSize === 'xs') {
       return hero.images[screenSize];
     } else {
-      // Manejar el caso donde el tamaño de pantalla no es válido
-      return 'https://example.com/default-image.jpg'; // O puedes devolver una imagen por defecto
+      return 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2020/12/the-evolution-of-iron-man-in-the-mcu.jpg';
     }
   }
   getScreenSize(): string {
